@@ -178,9 +178,9 @@ What you should learn from this project:
 
 ---
 
-### [0. Fork me if you can! ]
+### [0. Fork me if you can!]
 
-### [1. Bug free! ]
+### [1. Bug free!]
 
 ### [2. Console improvements]
 
