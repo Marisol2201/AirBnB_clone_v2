@@ -1,5 +1,4 @@
 --prepares a MySQL server for the project
-
 -- Prepares a MySQL server for the project
 
 CREATE DATABASE IF NOT EXISTS hbnb_test_db;
