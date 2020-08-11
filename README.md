@@ -141,6 +141,67 @@ Usage: <class_name>.update(<_id>, <dictionary>)
 ```
 <br>
 
-## Authors
+* Second part
+
+# 0x02. AirBnB clone - MySQL
+
+## Resources:books:
+Read or watch:
+* [cmd module](https://docs.python.org/3.4/library/cmd.html)
+* [packages](https://intranet.hbtn.io/concepts/66)
+* [unittest module](https://docs.python.org/3.4/library/unittest.html#module-unittest)
+* [args/kwargs](https://yasoob.me/2013/08/04/args-and-kwargs-in-python-explained/)
+* [SQLAlchemy tutorial](https://docs.sqlalchemy.org/en/13/orm/tutorial.html)
+* [How To Create a New User and Grant Permissions in MySQL](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql)
+* [Jimmy’s (My)SQL Cheat Sheet](https://gist.githubusercontent.com/MasterProgrammer200/771e877ff56a4e75f32d/raw/a66990e0935dc95029a1bba05db07c57cf231d9f/mySQLCheatSheet.SQL)
+* [Python3 and environment variables](https://docs.python.org/3/library/os.html?highlight=env#os.getenv)
+* [Object Relational Mapping with Python’s SQL Alchemy](https://medium.com/@eightlimbed/object-relational-mapping-with-pythons-sql-alchemy-1af658b02679)
+* [SQLAlchemy](https://docs.sqlalchemy.org/en/13/)
+* [MySQL 5.7 SQL Statement Syntax](https://dev.mysql.com/doc/refman/5.7/en/sql-syntax.html)
+* [AirBnB clone - ORM from Isaac Wong, Cohort #5,](https://www.youtube.com/watch?v=jeJwRB33YNg&feature=youtu.be)
+
+---
+
+## Learning Objectives:bulb:
+What you should learn from this project:
+
+* What is Unit testing and how to implement it in a large project
+* What is *args and how to use it
+* What is **kwargs and how to use it
+* How to handle named arguments in a function
+* How to create a MySQL database
+* How to create a MySQL user and grant it privileges
+* What ORM means
+* How to map a Python Class to a MySQL table
+* How to handle 2 different storage engines with the same codebase
+* How to use environment variables
+
+---
+
+### [0. Fork me if you can! ]
+
+### [1. Bug free! ]
+
+### [2. Console improvements]
+
+### [3. MySQL setup development]
+
+### [4. MySQL setup test]
+
+### [5. Delete object]
+
+### [6. DBStorage - States and Cities]
+
+### [7. DBStorage - User]
+
+### [8. DBStorage - Place]
+
+### [9. DBStorage - Review]
+
+### [10. DBStorage - Amenity... and BOOM!]
+
+---
+
+## Authors second part
 - **Marisol Ramirez Henao** - [Marisol github](https://github.com/Marisol2201)
-- **Cristina Rueda** - [CrisRuedaP](https://github.com/CrisRuedaP)
+- **Cristina Rueda** - [CrisRuedaP github](https://github.com/CrisRuedaP)
