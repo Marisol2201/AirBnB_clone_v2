@@ -1,2 +1,5 @@
 *__pycache__
 file.json
+main_delete.py
+*.log
+/.vscode
