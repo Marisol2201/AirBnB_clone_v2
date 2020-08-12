@@ -140,7 +140,7 @@ class HBNBCommand(cmd.Cmd):
             for key, value in my_dict.items():
                 if hasattr(obj, key):
                     setattr(obj, key, value)
-            storage.save()
+            obj.save()
             print("{}".format(obj.id))
         else:
             print("** class doesn't exist **")
