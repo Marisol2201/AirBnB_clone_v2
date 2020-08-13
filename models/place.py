@@ -2,10 +2,9 @@
 """ Place Module for HBNB project """
 import models
 from os import getenv
-from models.base_model import BaseModel, Base
 from models.review import Review
 from sqlalchemy.orm import relationship
-#from models.city import City
+from models.base_model import BaseModel, Base
 from sqlalchemy import Column, Integer, String, Float, ForeignKey
 
 
