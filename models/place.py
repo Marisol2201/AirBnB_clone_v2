@@ -5,7 +5,15 @@ from os import getenv
 from models.review import Review
 from sqlalchemy.orm import relationship
 from models.base_model import BaseModel, Base
-from sqlalchemy import Column, Integer, String, Float, ForeignKey
+from sqlalchemy import Column, Integer, String, Float, ForeignKey, Table
+
+
+metadata = Base.metadata
+place_amenity = Table('place_amenity', metadata,
+                      Column('place_id', String(60), ForeignKey(
+                          'places.id'), primary_key=True, nullable=False),
+                      Column('amenity_id', String(60), ForeignKey(
+                          'amenities.id'), primary_key=True, nullable=False))
 
 
 class Place(BaseModel, Base):
@@ -23,7 +31,9 @@ class Place(BaseModel, Base):
     longitude = Column(Float, nullable=True)
     amenity_ids = []
     reviews = relationship('Review', cascade='all, delete', backref='place')
-    
+    amenities = relationship(
+        'Amenity', secondary=place_amenity, viewonly=False)
+
     @property
     def reviews(self):
         """Getter for Review instances"""
@@ -33,4 +43,19 @@ class Place(BaseModel, Base):
             if review.place_id == self.id:
                 list_review.append(review)
         return list_review
-        
+
+    @property
+    def amenities(self):
+        """Getter for Amenity instances"""
+        list_amenities = []
+        dict_amenities = models.storage.all('Amenity')
+        for amenity in dict_amenities.values():
+            if amenity.id in self.amenity_ids:
+                list_amenities.append(amenity)
+        return list_amenities
+
+    @amenities.setter
+    def amenities(self):
+        """Setter for Amenity instances"""
+        if self.__class__.__name__ == "Amenity":
+            amenity_ids.append(self.id)
