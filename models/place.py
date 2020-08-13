@@ -34,15 +34,16 @@ class Place(BaseModel, Base):
     amenities = relationship(
         'Amenity', secondary=place_amenity, viewonly=False)
 
-    @property
-    def reviews(self):
-        """Getter for Review instances"""
-        list_review = []
-        dict_review = models.storage.all('Review')
-        for review in dict_review.values():
-            if review.place_id == self.id:
-                list_review.append(review)
-        return list_review
+    if getenv('HBNB_TYPE_STORAGE') != "db":
+        @property
+        def reviews(self):
+            """Getter for Review instances"""
+            list_review = []
+            dict_review = models.storage.all('Review')
+            for review in dict_review.values():
+                if review.place_id == self.id:
+                    list_review.append(review)
+            return list_review
 
     @property
     def amenities(self):
