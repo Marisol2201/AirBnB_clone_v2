@@ -21,22 +21,22 @@ class BaseModel:
         if len(kwargs) == 0:
             self.id = str(uuid.uuid4())
             self.created_at = self.updated_at = datetime.now()
+            models.storage.new(self)
+        if "created_at" in kwargs:
+            kwargs["created_at"] = datetime.strptime(kwargs["created_at"],
+                                                     "%Y-%m-%dT%H:%M:%S.%f")
         else:
-            if "created_at" in kwargs:
-                kwargs["created_at"] = datetime.strptime(
-                    kwargs["created_at"], "%Y-%m-%dT%H:%M:%S.%f")
-            else:
-                self.created_at = datetime.now()
-            if "updated_at" in kwargs:
-                kwargs["updated_at"] = datetime.strptime(
-                    kwargs["updated_at"], "%Y-%m-%dT%H:%M:%S.%f")
-            else:
-                self.updated_at = datetime.now()
-            if "id" not in kwargs:
-                self.id = str(uuid.uuid4())
-            for key, value in kwargs.items():
-                if "__class__" not in key:
-                    setattr(self, key, value)
+            self.created_at = datetime.now()
+        if "updated_at" in kwargs:
+            kwargs["updated_at"] = datetime.strptime(kwargs["updated_at"],
+                                                     "%Y-%m-%dT%H:%M:%S.%f")
+        else:
+            self.updated_at = datetime.now()
+        if "id" not in kwargs:
+            self.id = str(uuid.uuid4())
+        for key, value in kwargs.items():
+            if "__class__" not in key:
+                setattr(self, key, value)
 
     def __str__(self):
         """Returns a string representation of the instance"""
