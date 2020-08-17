@@ -184,9 +184,9 @@ What you should learn from this project:
 
 ### 2. Console improvements
 
-### 3. MySQL setup development
+### [3. MySQL setup development](./setup_mysql_dev.sql)
 
-### 4. MySQL setup test
+### [4. MySQL setup test](./setup_mysql_test.sql)
 
 ### 5. Delete object
 
@@ -205,3 +205,52 @@ What you should learn from this project:
 ## Authors second part
 - **Marisol Ramirez Henao** - [Marisol github](https://github.com/Marisol2201)
 - **Cristina Rueda** - [CrisRuedaP github](https://github.com/CrisRuedaP)
+
+
+---
+
+* Third part
+
+# 0x03. AirBnB clone - Deploy static
+
+## Resources:books:
+Read or watch:
+* [How to use Fabric](https://www.digitalocean.com/community/tutorials/how-to-use-fabric-to-automate-administration-tasks-and-deployments)
+* [How to use Fabric in Python](https://www.pythonforbeginners.com/systems-programming/how-to-use-fabric-in-python)
+* [Fabric and command line options](https://docs.fabfile.org/en/1.13/usage/fab.html)
+* [CI/CD concept page](https://intranet.hbtn.io/concepts/43)
+* [Nginx configuration for beginners](http://nginx.org/en/docs/beginners_guide.html)
+* [Difference between root and alias on NGINX](https://blog.heitorsilva.com/en/nginx/diferenca-entre-root-e-alias-do-nginx/)
+* [Fabric for Python 3](https://github.com/mathiasertl/fabric)
+* [Fabric Documentation](http://www.fabfile.org/)
+
+## Learning Objectives:bulb:
+What you should learn from this project:
+
+* What is Fabric
+* How to deploy code to a server easily
+* What is a tgz archive
+* How to execute Fabric command locally
+* How to execute Fabric command remotely
+* How to transfer files with Fabric
+* How to manage Nginx configuration
+* What is the difference between root and alias in a Nginx configuration
+
+---
+
+### [Prepare your web servers](./0-setup_web_static.sh)
+* Write a Bash script that sets up your web servers for the deployment of web_static.
+
+### [Compress before sending](./1-pack_web_static.py)
+* Generates a .tgz archive from the contents of the web_static folder of your AirBnB Clone repo, using the function do_pack.
+
+### [Deploy archive!](./2-do_deploy_web_static.py)
+* Write a Fabric script (based on the file 1-pack_web_static.py) that distributes an archive to your web servers, using the function do_deploy.
+
+### [Full deployment](./3-deploy_web_static.py)
+* Write a Fabric script (based on the file 2-do_deploy_web_static.py) that creates and distributes an archive to your web servers, using the function deploy.
+
+---
+
+## Author third part
+- **Marisol Ramirez Henao** - [Marisol github](https://github.com/Marisol2201)
