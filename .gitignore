@@ -4,3 +4,4 @@ main_delete.py
 *.log
 /.vscode
 main_place_amenities.py
+/versions
