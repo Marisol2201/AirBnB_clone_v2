@@ -33,7 +33,7 @@ class DBStorage:
         Base.metadata.create_all(self.__engine)
 
         if getenv('HBNB_ENV') == "test":
-                Base.metadata.drop_all(self.__engine)
+            Base.metadata.drop_all(self.__engine)
 
     def all(self, cls=None):
         """Returns a dictionary of objects"""
@@ -76,3 +76,8 @@ class DBStorage:
     def close(self):
         """close the session"""
         self.__session.remove()
+
+    def close(self):
+        """ call remove() method on the private session attribute
+        (self.__session) tips or close() on the class Session"""
+        self.__session.close()
